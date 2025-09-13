@@ -11,5 +11,4 @@ elif weight.endswith('pd'):
     pd = float(weight[:-2])
     kg = pd / kg_to_pd
     print(f"对应的公制重量为{kg:.3f}公斤")
-else 
-    print("错误，请重新输入")
+
