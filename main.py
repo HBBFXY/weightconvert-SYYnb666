@@ -5,7 +5,7 @@ num = float(weight_input[:-2])
 unit = weight_input[-2:]
 # 定义转换系数
 kg_to_pd = 2.2046
-pd_to_kg = 4.5350
+pd_to_kg = 0.4535
 # 根据单位进行转换并输出结果
 if unit == "kg":
     result = num * kg_to_pd
