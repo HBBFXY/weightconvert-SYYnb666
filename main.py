@@ -1,12 +1,13 @@
-#   WeightConvert.py
-WeightStr = input()
-if  WeightStr[-1]in ["kg"]:
-    pd = (eval (Weight[0:-1]))*2.20462
-    print("对应的英制重量为{：.3f}pd镑".format(pd))
-elif  WeightStr[-1] in ["pd"]:
-    kg = (eval (Weight[0:-1]))*0.453592
-    print("对应的公制质量为{: .3f}kg公斤".format(kg))
- else  print（）
- 
-                  
-
+# 获取用户输入
+weight = input()
+# 定义转换系数
+kg_to_pd = 2.2046
+# 判断输入是千克还是磅
+if weight.endswith('kg'):
+    kg = float(weight[:-2])
+    pd = kg * kg_to_pd
+    print(f"对应的英制重量为{pd:.3f}磅")
+elif weight.endswith('pd'):
+    pd = float(weight[:-2])
+    kg = pd / kg_to_pd
+    print(f"对应的公制重量为{kg:.3f}公斤"
